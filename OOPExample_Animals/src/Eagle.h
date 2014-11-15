@@ -12,9 +12,10 @@
 
 class Eagle: public Animal {
 public:
-	Eagle(string typeOfFood, int age, LivingPlace livingPlace);
+	Eagle(std::string typeOfFood, int age, LivingPlace livingPlace);
+	Eagle(const Eagle& other);
 	virtual ~Eagle();
-	void MakeSound();
+	void PrintInfo();
 	void Move();
 };
 

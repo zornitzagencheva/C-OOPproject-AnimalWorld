@@ -4,11 +4,9 @@
  *  Created on: 14.11.2014 ã.
  *      Author: Breeze
  */
-#include "string"
 #ifndef ANIMAL_H_
 #define ANIMAL_H_
-
-using namespace std;
+#include <string>
 
 enum LivingPlace
 {
@@ -18,19 +16,21 @@ enum LivingPlace
 	Woods,
 	Savanes,
 	Deserts,
-	Revers
+	Rivers
 };
 
 class Animal
 {
 public:
 	virtual ~Animal();
-	Animal(string typeOfFood, int age, LivingPlace livingPlace);
-	virtual void MakeSound() = 0;
+	Animal(std::string typeOfFood, int age, LivingPlace livingPlace);
+	virtual void PrintInfo() = 0;
 	virtual void Move() = 0;
-	string typeOfFood;
+
+protected:
+	std::string typeOfFood;
 	int age;
-	string livingPlace;
+	LivingPlace livingPlace;
 };
 
 #endif /* ANIMAL_H_ */

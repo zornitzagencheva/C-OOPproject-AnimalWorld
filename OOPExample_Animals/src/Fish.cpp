@@ -16,9 +16,9 @@ Fish::Fish(string typeOfFood, int age, LivingPlace livingPlace) : Animal(typeOfF
 
 Fish::~Fish() {}
 
-void Fish::MakeSound()
+void Fish::PrintInfo()
 {
-	cout << "I am fish and I say nothing!" << endl;
+	cout << "I am fish and I say nothing!" << this->age << endl;
 }
 
 void Fish::Move()

@@ -7,14 +7,14 @@
 
 #ifndef TIGER_H_
 #define TIGER_H_
-
+#include <iostream>
 #include "Animal.h"
 
 class Tiger: public Animal {
 public:
-	Tiger(string typeOfFood, int age, LivingPlace livingPlace);
+	Tiger(std::string typeOfFood, int age, LivingPlace livingPlace);
 	virtual ~Tiger();
-	void MakeSound();
+	void PrintInfo();
 	void Move();
 };
 

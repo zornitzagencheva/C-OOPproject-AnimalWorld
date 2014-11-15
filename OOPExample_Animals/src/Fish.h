@@ -13,9 +13,9 @@
 class Fish: public Animal
 {
 public:
-	Fish(string typeOfFood, int age, LivingPlace livingPlace);
+	Fish(std::string typeOfFood, int age, LivingPlace livingPlace);
 	virtual ~Fish();
-	void MakeSound();
+	void PrintInfo();
 	void Move();
 };
 
